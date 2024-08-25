@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -14,35 +14,36 @@
 
 }
 
-.nav p {
-    margin: 10px;
-}
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
-}
-
-.description a {
+.paginator {
+  width: 800px;
+  height: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+}
+.paginator
+
+
+.navElement {
+  display: inline-block;
+  margin: 2px;
+  border-radius: 10px;
+  width: 200px;
+  border: 1px solid white;
+  text-wrap: nowrap;
+  width: 300px;
+  padding: 10px 10px;
+  transition: all .5s;
 }
 
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+.navElement:hover {
+  background-color: white;
+  color: black;
+  font-size: large;
+}
+
+.nav p {
+    margin: 10px;
 }
 
 .code {
@@ -119,7 +120,7 @@
 .logo {
   position: relative;
 }
-/* Enable hover only on non-touch devices */
+/* Enable hover only on non-touch devices
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);
@@ -135,7 +136,7 @@
   .card:hover span {
     transform: none;
   }
-}
+} */
 
 /* Mobile */
 @media (max-width: 700px) {

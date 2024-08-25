@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,11 +15,13 @@ export default function Home() {
           <h1>Peter Dønvang</h1>
         </div>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum
-        consectetur quis nihil quod accusantium eaque voluptatum dolores quam
-        quas suscipit?
-      </p>
+      
+      <div className={styles.paginator}>
+        <Link className={styles.navElement} href={'/'}>Home</Link>
+        <Link className={styles.navElement} href={'/about'}>About</Link>
+        <Link className={styles.navElement} href={'/projects'}>projects</Link>
+        <Link className={styles.navElement} href={'/conceptsAndDesigns'}>Concepts and Designs</Link>
+      </div>
     </main>
   );
 }
