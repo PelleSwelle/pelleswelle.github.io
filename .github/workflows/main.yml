@@ -1,4 +1,4 @@
-name: CI/CD for react Todo 
+name: CI/CD for react Portfolio 
 
 on:
   push:
@@ -20,12 +20,10 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          cd portfolio
           npm install
 
       - name: Build Project
         run: |
-          cd portfolio
           npm run build
 
       - name: Upload artifact to enable deployment
