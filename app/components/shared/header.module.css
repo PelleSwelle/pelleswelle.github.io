@@ -1,0 +1,19 @@
+.header {
+  border-bottom: rgba(255, 255, 255, .5) 1px solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.nav >* {
+  padding: 20px;
+}
+
+.navElement:hover {
+  color: black;
+  background-color: white;
+}
+
+.socials > * {
+  padding: 20px;
+}

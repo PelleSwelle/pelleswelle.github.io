@@ -1,10 +1,25 @@
 .projects {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 2rem;
 }
 
 .project {
+  padding: 20px 20px;
   border: 1px solid white;
+  border-radius: 20px;
+  box-shadow: inset 20px white;
 }
+
+.project:hover {
+  background-color: rgb(255, 255, 255);
+  
+  .image {
+    transition: all 1s;
+    filter: blur(2px);
+  }
+}
+
 
 .techs {
   display: flex;
@@ -18,12 +33,32 @@
   border-radius: 5px;
 }
 
-.keywords:nth-child(0) {
+.keywords {
+  display: flex;
+}
+
+.keyword {
+  list-style: none;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin: 10px 10px;
+}
+
+.keyword:nth-child(1) {
   color: green;
+  border: 1px solid green;
 }
-.keywords:nth-child(1) {
+.keyword:nth-child(2) {
   color: blue;
+  border: 1px solid blue;
 }
-.keywords:nth-child(2) {
+.keyword:nth-child(3) {
   color: red;
+  border: 1px solid red;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 17px;
 }

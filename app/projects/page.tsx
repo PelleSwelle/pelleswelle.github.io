@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Projects() {
   interface Project {
@@ -21,14 +22,32 @@ export default function Projects() {
       techs: ['Unity', 'C#'],
       keywords: ['Augmented Reality', 'realtime audio synthesis', 'hand tracking'],
       image: '/synth.png'
-    }
+    },
+    {
+      name: 'The Dream House Murder',
+      techs: ['Unity', 'C#'],
+      keywords: ['Augmented Reality', 'whodunnit', 'murder-mystery', 'dialogue system'],
+      image: '/dreamhouseMurderCover.png'
+    },
+    {
+      name: 'Environman',
+      techs: ['Processing', 'Java', 'p5.js'],
+      keywords: ['Serious Game', 'Side-scroller', '2D'],
+      image: '/environman.png'
+    },
+    {
+      name: 'Anvisninger.dk',
+      techs: ['Figma'],
+      keywords: ['UX-design', 'interface-design', 'web design'],
+      image: '/anvisninger.png'
+    },
+
   ];
 
   return (
-    <div className={styles.projects}>
-      <ul>
+      <ul className={styles.projects}>
         {projects.map((project) => (
-          <li className={styles.project}>
+          <Link href={'/projects/'+ project.name } className={styles.project}>
             <h3>{project.name}</h3>
             <ul className={styles.techs}>
               {project.techs.map((tech) => (
@@ -41,20 +60,14 @@ export default function Projects() {
               ))}
             </ul>
             <Image
+              className={styles.image}
               src={project.image}
               width={520}
               height={280}
-              alt="project image"
+              alt={project.name}
             />
-          </li>
+          </Link>
         ))}
       </ul>
-      <ul>
-        <li>The Dream House Murder</li>
-        <li>Virtual Musicality</li>
-        <li>Environman</li>
-        <li>Anvisninger.dk</li>
-      </ul>
-    </div>
   );
 }

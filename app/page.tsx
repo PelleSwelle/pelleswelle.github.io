@@ -15,13 +15,6 @@ export default function Home() {
           <h1>Peter Dønvang</h1>
         </div>
       </div>
-      
-      <div className={styles.paginator}>
-        <Link className={styles.navElement} href={'/'}>Home</Link>
-        <Link className={styles.navElement} href={'/about'}>About</Link>
-        <Link className={styles.navElement} href={'/projects'}>projects</Link>
-        <Link className={styles.navElement} href={'/conceptsAndDesigns'}>Concepts and Designs</Link>
-      </div>
     </main>
   );
 }

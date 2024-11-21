@@ -2,6 +2,7 @@ import styles from "../page.module.css";
 
 export default function About() {
   return (
+    <main>
     <div className={styles.center}>
       <div className="about">
         <strong>
@@ -19,5 +20,7 @@ export default function About() {
         </p>
       </div>
     </div>
+
+    </main>
   );
 }
